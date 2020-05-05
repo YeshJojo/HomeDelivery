@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/designMainColor"
+        app:cardCornerRadius="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:maxWidth="70dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/grocery" />
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+        <com.jojo.customfonts.MyTextView_Poppins_Regular
+            android:id="@+id/examName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#0F0101"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:drawableRight="@drawable/ic_right_icon"
+            android:layout_marginBottom="5dp"/>
+    </LinearLayout>
+</LinearLayout>

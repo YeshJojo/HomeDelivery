@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".Product_detail">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_marginTop="20dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="20dp"
+            android:minHeight="200dp"
+            app:cardBackgroundColor="@color/designMainColor"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="10dp"
+            app:cardPreventCornerOverlap="false">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Shop now, \npay Next Month"
+                    android:textColor="@color/whiteBodyColor"
+                    android:textSize="17sp"
+                    android:layout_marginStart="20dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:text="Introducing postpaid \nfor shopping."
+                    android:textColor="@color/whiteBodyColor"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:layout_centerVertical="true"
+            android:elevation="44dp"
+            android:src="@drawable/hero_image" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#fff"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Amount to be Paid: "
+                android:textSize="16sp"
+                android:textColor="@color/darkTextColor"/>
+            <com.jojo.customfonts.MyTextView_Poppins_Bold
+                android:id="@+id/priceDisp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="18sp"
+                android:textColor="@color/darkTextColor"/>
+        </LinearLayout>
+        <com.jojo.customfonts.MyTextView_Poppins_Regular
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:padding="20dp"
+            android:text="Select your Payment method" />
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="15dp"
+            android:orientation="horizontal">
+            <RadioButton
+                android:id="@+id/paytmBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="Paytm"/>
+            <RadioButton
+                android:id="@+id/gpayBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="Google Pay"/>
+            <RadioButton
+                android:id="@+id/phonepeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="PhonePe"/>
+            <RadioButton
+                android:id="@+id/upiBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:onClick="onRadioButtonClicked"
+                android:text="UPI"/>
+        </RadioGroup>
+        <com.jojo.customfonts.EditText_Poppins_Regular
+            android:id="@+id/upiID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your UPI ID"
+            android:visibility="gone"
+            android:padding="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/edittext_background"/>
+        <com.jojo.customfonts.MyTextView_Poppins_Regular
+            android:id="@+id/confirmPayment"
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:background="@drawable/btn_gradient"
+            android:padding="20dp"
+            android:text="Continue Payment" />
+    </LinearLayout>
+</RelativeLayout>

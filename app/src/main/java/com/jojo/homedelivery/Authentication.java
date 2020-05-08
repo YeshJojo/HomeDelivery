@@ -54,9 +54,11 @@ public class Authentication extends AppCompatActivity {
     private PinView verifyCodeET;
     private TextView phonenumberText;
     private String mVerificationId;
-    private PhoneAuthProvider.ForceResendingToken mResendToken;
     private FirebaseAuth mAuth;
     private ProgressDialog loading, loading2;
+
+    public Authentication() {
+    }
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -132,7 +134,6 @@ public class Authentication extends AppCompatActivity {
             @Override
             public void onCodeSent(String verificationId, PhoneAuthProvider.ForceResendingToken token) {
                 mVerificationId = verificationId;
-                mResendToken = token;
             }
         };
 

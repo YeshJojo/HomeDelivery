@@ -1,43 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
+    android:id="@+id/card_item"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:padding="10dp">
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/designMainColor"
-        app:cardCornerRadius="16dp">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
-            android:cropToPadding="true"
-            android:maxWidth="70dp"
-            android:layout_margin="10dp"
-            android:src="@drawable/grocery" />
-    </androidx.cardview.widget.CardView>
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="21dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="14dp"
+    app:cardElevation=".1dp"
+    app:cardPreventCornerOverlap="false">
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        android:layout_marginLeft="20dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            android:id="@+id/examName"
+
+        <ImageView
+            android:id="@+id/card_view_image"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/grocery" />
+
+        <com.jojo.customfonts.MyTextView_Poppins_Bold
+            android:id="@+id/stag_item_course"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
             android:text=""
-            android:textColor="#0F0101"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:drawableRight="@drawable/ic_right_icon"
-            android:layout_marginBottom="5dp"/>
+            android:textColor="@color/darkTextColor"
+            android:textSize="15sp" />
+        <com.jojo.customfonts.MyTextView_Poppins_Medium
+            android:id="@+id/stag_item_quantity_course"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="19 courses"
+            android:textColor="@color/miniTitle"
+            android:textSize="11sp" />
     </LinearLayout>
-</LinearLayout>
+</androidx.cardview.widget.CardView>

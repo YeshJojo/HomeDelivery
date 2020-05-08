@@ -78,8 +78,8 @@
 40-->[com.paytm:pgplussdk:1.2.3] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\749e0369e548ab4334c0230264d3a86a\jetified-pgplussdk-1.2.3\AndroidManifest.xml:16:13-44
 41        <activity
 41-->G:\android\HomeDelivery\app\src\main\AndroidManifest.xml:24:9-27:20
-42            android:name="com.jojo.homedelivery.Product_detail"
-42-->G:\android\HomeDelivery\app\src\main\AndroidManifest.xml:25:13-43
+42            android:name="com.jojo.homedelivery.Checkout"
+42-->G:\android\HomeDelivery\app\src\main\AndroidManifest.xml:25:13-37
 43            android:theme="@style/AppTheme.NoActionBar" >
 43-->G:\android\HomeDelivery\app\src\main\AndroidManifest.xml:26:13-56
 44        </activity>
@@ -115,40 +115,40 @@
 60-->G:\android\HomeDelivery\app\src\main\AndroidManifest.xml:43:9-52
 60-->G:\android\HomeDelivery\app\src\main\AndroidManifest.xml:43:19-49
 61        <activity
-61-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:24:9-31:50
+61-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:24:9-31:50
 62            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-62-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:25:13-85
+62-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:25:13-85
 63            android:excludeFromRecents="true"
-63-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:26:13-46
+63-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:26:13-46
 64            android:exported="true"
-64-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:27:13-36
+64-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:27:13-36
 65            android:launchMode="singleTask"
-65-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:28:13-44
+65-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:28:13-44
 66            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-66-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:29:13-102
+66-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:29:13-102
 67            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-67-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:30:13-72
+67-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:30:13-72
 68
 69        <service
-69-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:33:9-39:19
+69-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:33:9-39:19
 70            android:name="com.google.firebase.components.ComponentDiscoveryService"
-70-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:34:13-84
+70-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:34:13-84
 71            android:directBootAware="true"
 71-->[com.google.firebase:firebase-common:19.3.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\82e1e36690fb680e8f5047be336d7c56\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
 72            android:exported="false" >
-72-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:35:13-37
+72-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:35:13-37
 73            <meta-data
-73-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:36:13-38:85
+73-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:36:13-38:85
 74                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-74-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:37:17-109
+74-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:37:17-109
 75                android:value="com.google.firebase.components.ComponentRegistrar" />
-75-->[com.google.firebase:firebase-auth:19.2.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\86493f297b5d5c5a2ed13ef22a8b2f8e\firebase-auth-19.2.0\AndroidManifest.xml:38:17-82
+75-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\36c73ee6ada6d87c590337cfa0ce2a6c\firebase-auth-19.3.1\AndroidManifest.xml:38:17-82
 76            <meta-data
-76-->[com.google.firebase:firebase-database:19.2.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\747808231b7b0f5fd5276a2cb16c7f7d\firebase-database-19.2.1\AndroidManifest.xml:32:13-34:85
+76-->[com.google.firebase:firebase-database:19.3.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\cb042278998d89dd3a1f158eaae71d59\firebase-database-19.3.0\AndroidManifest.xml:32:13-34:85
 77                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-77-->[com.google.firebase:firebase-database:19.2.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\747808231b7b0f5fd5276a2cb16c7f7d\firebase-database-19.2.1\AndroidManifest.xml:33:17-109
+77-->[com.google.firebase:firebase-database:19.3.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\cb042278998d89dd3a1f158eaae71d59\firebase-database-19.3.0\AndroidManifest.xml:33:17-109
 78                android:value="com.google.firebase.components.ComponentRegistrar" />
-78-->[com.google.firebase:firebase-database:19.2.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\747808231b7b0f5fd5276a2cb16c7f7d\firebase-database-19.2.1\AndroidManifest.xml:34:17-82
+78-->[com.google.firebase:firebase-database:19.3.0] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\cb042278998d89dd3a1f158eaae71d59\firebase-database-19.3.0\AndroidManifest.xml:34:17-82
 79            <meta-data
 79-->[com.google.firebase:firebase-storage:19.1.1] C:\Users\yeshw\.gradle\caches\transforms-2\files-2.1\b154581dbdae276cb22b899e234333ea\firebase-storage-19.1.1\AndroidManifest.xml:33:13-35:85
 80                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"

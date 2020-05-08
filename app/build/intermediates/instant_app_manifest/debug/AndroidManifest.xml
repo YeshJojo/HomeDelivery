@@ -40,7 +40,7 @@
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.jojo.homedelivery.Product_detail"
+            android:name="com.jojo.homedelivery.Checkout"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity

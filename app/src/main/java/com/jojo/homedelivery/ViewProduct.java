@@ -34,7 +34,7 @@ public class ViewProduct extends AppCompatActivity {
     TextView back;
 
     ProgressDialog progressDialog;
-    List<product> list = new ArrayList<>();
+    List<productDetails> list = new ArrayList<>();
     RecyclerView recyclerView;
     RecyclerView.Adapter adapter ;
 
@@ -81,7 +81,7 @@ public class ViewProduct extends AppCompatActivity {
             public void onDataChange(DataSnapshot snapshot) {
                 list.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
-                    product productDetails = dataSnapshot.getValue(product.class);
+                    productDetails productDetails = dataSnapshot.getValue(productDetails.class);
                     list.add(productDetails);
                 }
                 adapter = new RecyclerViewAdapter(ViewProduct.this, list);

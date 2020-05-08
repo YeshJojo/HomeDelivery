@@ -12,8 +12,8 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     Context context;
-    List<product> info;
-    public RecyclerViewAdapter(Context context, List<product> TempList) {
+    List<productDetails> info;
+    public RecyclerViewAdapter(Context context, List<productDetails> TempList) {
         this.info = TempList;
         this.context = context;
     }
@@ -25,7 +25,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final product productDetails = info.get(position);
+        final productDetails productDetails = info.get(position);
         holder.productNameTextView.setText(productDetails.getName());
         holder.productPriceTextView.setText("₹ "+productDetails.getPrice());
         holder.productDescTextView.setText(productDetails.getDesc());
@@ -33,7 +33,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent detail = new Intent(context, Product_detail.class);
+                Intent detail = new Intent(context, Checkout.class);
                 detail.putExtra("name", productDetails.getName());
                 detail.putExtra("price", productDetails.getPrice());
                 context.startActivity(detail);

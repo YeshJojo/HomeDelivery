@@ -11,17 +11,20 @@ import androidx.fragment.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView bottomNavigationView;
     FirebaseAuth auth = FirebaseAuth.getInstance();
+    FirebaseUser user;
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
         @Override
@@ -29,20 +32,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Fragment fragment = null;
             switch (item.getItemId()) {
                 case R.id.navigationMyProfile:
-                    fragment = new profile();
-                    getSupportFragmentManager()
-                            .beginTransaction()
-                            .replace(R.id.fragment_container, fragment)
-                            .commit();
+                    loadFragment(new profile());
                     return true;
                 case R.id.navigationMyCourses:
                     return true;
                 case R.id.navigationHome:
-                    fragment = new home();
-                    getSupportFragmentManager()
-                            .beginTransaction()
-                            .replace(R.id.fragment_container, fragment)
-                            .commit();
+                    loadFragment(new home());
                     return true;
                 case  R.id.navigationSearch:
                     return true;
@@ -58,7 +53,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_main);
 
         loadFragment(new home());
@@ -100,7 +94,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id = item.getItemId();
 
         if (id == R.id.profile) {
-            // Handle the camera action
+            loadFragment(new profile());
         } else if (id == R.id.address) {
 
         } else if (id == R.id.orders) {

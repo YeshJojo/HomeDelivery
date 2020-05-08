@@ -1,34 +1,62 @@
 package com.jojo.homedelivery;
 
 public class product {
-    String price;
-    String name;
-    String desc;
+    private int Id;
+    private int imageCourse;
+    private String productTitle;
+    private String quantityCourses;
+    private String urlCourse;
 
-    public product(){
-
-    }
-    public product(String name, String price, String desc){
-        this.name = name;
-        this.price = price;
-        this.desc = desc;
-    }
-
-    public String getPrice() {
-        return price;
+    public product(int id, int imageCourse, String courseTitle, String quantityCourses) {
+        Id = id;
+        this.imageCourse = imageCourse;
+        this.productTitle = courseTitle;
+        this.quantityCourses = quantityCourses;
     }
 
-    public String getName() {
-        return name;
+    public product(int imageCourse, String courseTitle, String quantityCourses) {
+        this.imageCourse = imageCourse;
+        this.productTitle = courseTitle;
+        this.quantityCourses = quantityCourses;
     }
 
-    public String getDesc() { return desc; }
+    public int getId() {
+        return Id;
+    }
 
-    public void setPrice(String price) { this.price = price; }
+    public void setId(int id) {
+        Id = id;
+    }
 
-    public void setName(String name) { this.name = name; }
+    public int getImageCourse() {
+        return imageCourse;
+    }
 
-    public void setDesc(String desc) { this.desc = desc; }
+    public void setImageCourse(int imageCourse) {
+        this.imageCourse = imageCourse;
+    }
 
+    public String getProductTitle() {
+        return productTitle;
+    }
 
+    public void setProductTitle(String courseTitle) {
+        this.productTitle = courseTitle;
+    }
+
+    public String getQuantityCourses() {
+        return quantityCourses;
+    }
+
+    public void setQuantityCourses(String quantityCourses) {
+        this.quantityCourses = quantityCourses;
+    }
+
+    public String getUrlCourse() {
+        return urlCourse;
+    }
+
+    public void setUrlCourse(String urlCourse) {
+        this.urlCourse = urlCourse;
+    }
 }

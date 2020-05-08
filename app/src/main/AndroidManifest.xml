@@ -22,7 +22,7 @@
             android:screenOrientation="fullSensor"
             tools:replace="android:screenOrientation" />
         <activity
-            android:name=".Product_detail"
+            android:name=".Checkout"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity

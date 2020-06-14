@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\android\\HomeDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
+            "outputFile": "G:\\Projects\\android\\HomeDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rUS\\values-es-rUS.xml",
             "map": [
                 {
                     "source": "C:\\Users\\yeshw\\.gradle\\caches\\transforms-2\\files-2.1\\4afd92af0fc64b29bf8934693e7bb583\\play-services-wallet-18.0.0\\res\\values-es-rUS\\values.xml",
@@ -55,23 +55,6 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\yeshw\\.gradle\\caches\\transforms-2\\files-2.1\\08e5b2199916d18eb56d041d1c174263\\jetified-play-services-basement-17.0.0\\res\\values-es-rUS\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "251",
-                        "endColumns": "204",
-                        "endOffsets": "455"
-                    },
-                    "to": {
-                        "startLines": "37",
-                        "startColumns": "4",
-                        "startOffsets": "4014",
-                        "endColumns": "204",
-                        "endOffsets": "4214"
-                    }
-                },
-                {
                     "source": "C:\\Users\\yeshw\\.gradle\\caches\\transforms-2\\files-2.1\\ec252c8b17ba178b3fc43c552c494b6c\\navigation-ui-2.2.2\\res\\values-es-rUS\\values-es-rUS.xml",
                     "from": {
                         "startLines": "2,3",
@@ -103,6 +86,23 @@
                         "startOffsets": "5964",
                         "endColumns": "100",
                         "endOffsets": "6060"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\yeshw\\.gradle\\caches\\transforms-2\\files-2.1\\402871df6dd9ffe1a367a52c4f4442e7\\jetified-play-services-basement-17.0.0\\res\\values-es-rUS\\values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "251",
+                        "endColumns": "204",
+                        "endOffsets": "455"
+                    },
+                    "to": {
+                        "startLines": "37",
+                        "startColumns": "4",
+                        "startOffsets": "4014",
+                        "endColumns": "204",
+                        "endOffsets": "4214"
                     }
                 }
             ]

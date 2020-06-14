@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\android\\HomeDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
+            "outputFile": "G:\\Projects\\android\\HomeDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-ky\\values-ky.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\yeshw\\.gradle\\caches\\transforms-2\\files-2.1\\08e5b2199916d18eb56d041d1c174263\\jetified-play-services-basement-17.0.0\\res\\values-ky\\values.xml",
+                    "source": "C:\\Users\\yeshw\\.gradle\\caches\\transforms-2\\files-2.1\\402871df6dd9ffe1a367a52c4f4442e7\\jetified-play-services-basement-17.0.0\\res\\values-ky\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",

@@ -1,85 +1,122 @@
 package com.jojo.homedelivery;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBarDrawerToggle;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.TextView;
-
-import androidx.appcompat.widget.Toolbar;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.jojo.fragments.cart;
+import com.jojo.fragments.home;
+import com.jojo.fragments.profile;
+import com.jojo.fragments.search;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+import java.util.Objects;
 
-    private BottomNavigationView bottomNavigationView;
+public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth = FirebaseAuth.getInstance();
     FirebaseUser user;
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
-
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment fragment = null;
-            switch (item.getItemId()) {
-                case R.id.navigationMyProfile:
-                    loadFragment(new profile());
-                    return true;
-                case R.id.navigationMyCourses:
-                    return true;
-                case R.id.navigationHome:
-                    loadFragment(new home());
-                    return true;
-                case  R.id.navigationSearch:
-                    return true;
-                case  R.id.navigationMenu:
-                    DrawerLayout drawer = findViewById(R.id.drawer_layout);
-                    drawer.openDrawer(GravityCompat.START);
-                    return true;
-            }
-            return loadFragment(fragment);
-        }
-    };
+    private TabLayout tabLayout;
+    private View view;
+    TextView textView, username_disp;
+    ImageView imageView, profileImage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        username_disp = findViewById(R.id.username_disp);
+        profileImage = findViewById(R.id.profileImage);
+
+        tabLayout = findViewById(R.id.tabLayout);
+        view = LayoutInflater.from(getApplicationContext()).inflate(R.layout.tab_background, null);
+        textView = view.findViewById(R.id.tv1);
+        imageView = view.findViewById(R.id.iv1);
 
         loadFragment(new home());
-
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
-
-        NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-        bottomNavigationView = findViewById(R.id.navigation);
-        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-
-        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) bottomNavigationView.getLayoutParams();
+        if(auth.getCurrentUser()!=null){
+            username_disp.setText(auth.getCurrentUser().getPhoneNumber());
+        }
+        CoordinatorLayout.LayoutParams layoutParams = (CoordinatorLayout.LayoutParams) tabLayout.getLayoutParams();
         layoutParams.setBehavior(new BottomNavigationBehavior());
-        bottomNavigationView.setSelectedItemId(R.id.navigationHome);
+        setCustomView(0, 1, 2, 3);
+        setTextAndImageWithAnimation("HOME", R.drawable.ic_home);
+        loadFragment(new home());
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                switch (tab.getPosition()) {
+                    case 1:
+                        setCustomView(1, 0, 2, 3);
+                        setTextAndImageWithAnimation("SEARCH", R.drawable.ic_search);
+                        loadFragment(new search());
+                        break;
+                    case 2:
+                        setCustomView(2, 1, 0, 3);
+                        setTextAndImageWithAnimation("CART", R.drawable.ic_cart);
+                        loadFragment(new cart());
+                        break;
+                    case 3:
+                        setCustomView(3, 1, 2, 0);
+                        setTextAndImageWithAnimation("PROFILE", R.drawable.ic_user);
+                        //change to the fragment which you want to display
+                        loadFragment(new profile());
+                        break;
+                    case 0:
+
+                    default:
+                        setCustomView(0, 1, 2, 3);
+                        setTextAndImageWithAnimation("HOME", R.drawable.ic_home);
+                        //change to the fragment which you want to display
+                        loadFragment(new home());
+                        break;
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+    }
+
+    private void setCustomView(int selectedtab, int non1, int non2, int non3) {
+        Objects.requireNonNull(tabLayout.getTabAt(selectedtab)).setCustomView(view);
+        Objects.requireNonNull(tabLayout.getTabAt(non1)).setCustomView(null);
+        Objects.requireNonNull(tabLayout.getTabAt(non2)).setCustomView(null);
+        Objects.requireNonNull(tabLayout.getTabAt(non3)).setCustomView(null);
+    }
+
+    private void setTextAndImageWithAnimation(String text, int images) {
+        Animation animation = AnimationUtils.loadAnimation(getApplicationContext(), android.R.anim.fade_in);
+        animation.setInterpolator(new AccelerateDecelerateInterpolator());
+        textView.setText(text);
+        imageView.setImageResource(images);
+        textView.startAnimation(animation);
+        imageView.startAnimation(animation);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
@@ -88,31 +125,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.profile) {
-            loadFragment(new profile());
-        } else if (id == R.id.address) {
-
-        } else if (id == R.id.orders) {
-
-        } else if (id == R.id.payment) {
-
-        } else if (id == R.id.logout) {
-            auth.signOut();
-            startActivity(new Intent(MainActivity.this, SplashActivity.class));
-            finish();
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
     private boolean loadFragment(Fragment fragment) {
-        //switching fragment
         if (fragment != null) {
             getSupportFragmentManager()
                     .beginTransaction()

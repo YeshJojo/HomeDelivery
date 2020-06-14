@@ -1,87 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/contentBodyColor">
-    <LinearLayout
+    android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="20dp">
-        <com.jojo.customfonts.MyTextView_Poppins_Bold
-            android:text="Profile"
-            style="@style/viewParent.headerText" />
-        <RelativeLayout
+        android:paddingTop="?attr/actionBarSize"
+        tools:ignore="MissingConstraints">
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/profile">
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/profile1"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:src="@drawable/ic_user"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="10dp"/>
-            <com.jojo.customfonts.MyTextView_Poppins_Regular
-                android:id="@+id/username"
-                style="@style/viewParent.headerText"
-                android:text="Username"
-                android:textSize="18sp"
-                android:layout_toEndOf="@id/profile1"
-                android:layout_marginTop="20dp"/>
+            android:orientation="vertical"
+            android:padding="20dp">
+            <com.jojo.customfonts.MyTextView_Poppins_Bold
+                android:text="Profile"
+                style="@style/viewParent.headerText" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/profile">
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/ic_user"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="10dp"/>
+                <com.jojo.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/username"
+                    style="@style/viewParent.headerText"
+                    android:text="Username"
+                    android:textSize="18sp"
+                    android:layout_toEndOf="@id/profile1"
+                    android:layout_marginTop="20dp"/>
 
-            <com.jojo.customfonts.MyTextView_Poppins_Regular
-                android:id="@+id/profile3"
-                style="@style/viewParent.headerText"
-                android:layout_below="@id/username"
-                android:layout_toEndOf="@id/profile1"
-                android:text="View personal details"
-                android:textColor="#5D5C5C"
-                android:textSize="16sp" />
+                <com.jojo.customfonts.MyTextView_Poppins_Regular
+                    android:id="@+id/profile3"
+                    style="@style/viewParent.headerText"
+                    android:layout_below="@id/username"
+                    android:layout_toEndOf="@id/profile1"
+                    android:text="View personal details"
+                    android:textColor="#5D5C5C"
+                    android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/profile4"
-                style="@style/viewParent"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:src="@drawable/ic_more" />
-        </RelativeLayout>
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            style="@style/viewParent.headerText.settingsMiniTitle"
-            android:text="Profile"/>
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            android:id="@+id/editProfile"
-            style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_edit_profile"
-            android:text="Edit Profile" />
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            android:id="@+id/changePassword"
-            style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_edit_password"
-            android:layout_marginTop="10dp"
-            android:text="Change Password" />
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            style="@style/viewParent.headerText.settingsMiniTitle"
-            android:text="Notifications"/>
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            style="@style/settingsText"
-            android:checked="true"
-            android:drawableLeft="@drawable/ic_notifications"
-            android:text="Notifications" />
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            style="@style/viewParent.headerText.settingsMiniTitle"
-            android:text="Regional"/>
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_languages"
-            android:text="Language" />
-        <com.jojo.customfonts.MyTextView_Poppins_Regular
-            android:id="@+id/settingsLogout"
-            style="@style/viewParent.headerText.settingsTextIcon"
-            android:drawableLeft="@drawable/ic_logout"
-            android:text="Logout" />
-    </LinearLayout>
-</ScrollView>
+                <ImageView
+                    android:id="@+id/profile4"
+                    style="@style/viewParent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_more" />
+            </RelativeLayout>
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Profile"/>
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                android:id="@+id/editProfile"
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:drawableLeft="@drawable/ic_edit_profile"
+                android:text="Edit Profile" />
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                android:id="@+id/changePassword"
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:drawableLeft="@drawable/ic_edit_password"
+                android:layout_marginTop="10dp"
+                android:text="Change Password" />
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Settings"/>
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:checked="true"
+                android:drawableLeft="@drawable/ic_notifications"
+                android:text="Notifications" />
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:checked="true"
+                android:id="@+id/contact"
+                android:drawableLeft="@drawable/ic_baseline"
+                android:text="Contact us" />
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Regional"/>
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:drawableLeft="@drawable/ic_languages"
+                android:text="Language" />
+            <com.jojo.customfonts.MyTextView_Poppins_Regular
+                android:id="@+id/settingsLogout"
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:drawableLeft="@drawable/ic_logout"
+                android:text="Logout" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

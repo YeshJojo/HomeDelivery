@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f1f3f4"
+    tools:context="com.jojo.contact.ContactActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        android:background="@drawable/toolbar_background"
+        app:popupTheme="@style/AppTheme.PopupOverlay" >
+        <TextView
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2d2d2d"
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:drawableStart="@drawable/ic_arrow_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:text="Contact Us"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#2d2d2d"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/layout"
+        android:visibility="visible"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+    <LinearLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:visibility="visible"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/msgTextLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.jojo.customfonts.EditText_Poppins_Regular
+                android:id="@+id/message"
+                android:layout_width="222dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="3"
+                android:background="@drawable/ic_edittext_bg"
+                android:hint="Enter your query"
+                android:lines="1"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:inputType="textCapSentences"
+                android:paddingStart="10dp"
+                tools:ignore="RtlSymmetry" />
+            <ImageView
+                android:id="@+id/btn_send"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:layout_marginTop="15dp"
+                android:elevation="0dp"
+                android:paddingLeft="10dp"
+                android:tint="@color/designMainColor"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_send" />
+        </LinearLayout>
+        <com.jojo.customfonts.Button_Poppins_Regular
+            android:id="@+id/finishBtn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/toolbar_background"
+            android:text="Finish"
+            android:lines="1"
+            android:visibility="gone"
+            android:inputType="textCapSentences"
+            android:paddingStart="10dp"
+            tools:ignore="RtlSymmetry" />
+    </LinearLayout>
+</RelativeLayout>

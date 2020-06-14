@@ -22,10 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 import java.lang.reflect.Method;
 
 public class SplashActivity extends AppCompatActivity {
-
     private FirebaseAuth mAuth;
     LinearLayout linearLayout;
-
     @Override
     public void onStart() {
         super.onStart();
@@ -58,7 +56,7 @@ public class SplashActivity extends AppCompatActivity {
                     alert.show();
                 }
             }
-        }, 1500);
+        }, 1000);
     }
 
     @Override

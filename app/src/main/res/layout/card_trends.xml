@@ -1,11 +1,12 @@
-<androidx.cardview.widget.CardView android:layout_width="wrap_content"
+<androidx.cardview.widget.CardView xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="10dp"
     android:minWidth="300dp"
     app:cardPreventCornerOverlap="false"
-    android:layout_marginRight="20dp"
+    android:layout_marginEnd="20dp"
     android:layout_marginTop="10dp"
     android:layout_marginBottom="20dp">
 
@@ -14,7 +15,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:padding="10dp"
-        android:layout_gravity="left">
+        android:layout_gravity="left"
+        tools:ignore="RtlHardcoded">
 
         <ImageView
             android:id="@+id/trendsThumbnail"
@@ -25,10 +27,10 @@
             android:cropToPadding="true"
             android:src="@drawable/grocery"
             android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true"/>
+            android:layout_alignParentStart="true"/>
         <TextView
             android:id="@+id/trendsTitle"
-            android:layout_toRightOf="@id/trendsThumbnail"
+            android:layout_toEndOf="@id/trendsThumbnail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -43,11 +45,11 @@
             android:layout_height="1dp"
             android:layout_below="@id/trendsTitle"
             android:background="#676767"
-            android:layout_marginLeft="20dp"
-            android:layout_toRightOf="@id/trendsThumbnail"/>
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/trendsThumbnail"/>
         <TextView
             android:layout_below="@id/trendsTitle"
-            android:layout_toRightOf="@id/trendsThumbnail"
+            android:layout_toEndOf="@id/trendsThumbnail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -56,7 +58,7 @@
             android:textSize="16sp"
             android:textStyle="bold"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:maxLines="2"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

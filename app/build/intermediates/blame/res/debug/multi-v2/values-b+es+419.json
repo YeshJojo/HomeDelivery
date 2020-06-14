@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "G:\\android\\HomeDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-b+es+419\\values-b+es+419.xml",
+            "outputFile": "G:\\Projects\\android\\HomeDelivery\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-b+es+419\\values-b+es+419.xml",
             "map": [
                 {
                     "source": "C:\\Users\\yeshw\\.gradle\\caches\\transforms-2\\files-2.1\\4afd92af0fc64b29bf8934693e7bb583\\play-services-wallet-18.0.0\\res\\values-b+es+419\\values.xml",

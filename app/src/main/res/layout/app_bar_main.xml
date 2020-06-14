@@ -6,41 +6,42 @@
     android:layout_height="match_parent"
     android:paddingTop="15dp"
     tools:context=".MainActivity">
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <androidx.appcompat.widget.Toolbar
-            android:visibility="gone"
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
-    </com.google.android.material.appbar.AppBarLayout>
     <include layout="@layout/content_main" />
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="56dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigation"
+    <com.google.android.material.tabs.TabLayout
+        android:background="#FFFFFF"
+        android:id="@+id/tabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:background="?android:attr/windowBackground"
-        android:foreground="?attr/selectableItemBackground"
-        app:menu="@menu/master_bottom_navigation"
-        app:elevation="10dp"
-        app:labelVisibilityMode="labeled"
-        app:itemIconTint="@color/bottom_navigation_color"
-        app:itemTextColor="@color/bottom_navigation_color"
-        app:itemBackground="@color/bottomNavigationBackground"/>
-
+        android:layout_height="72dp"
+        android:layout_gravity="bottom|center"
+        app:tabGravity="center"
+        app:tabIconTint="@android:color/darker_gray"
+        app:tabIndicator="@null"
+        app:tabMinWidth="40dp"
+        app:tabMode="scrollable"
+        app:tabRippleColor="@null">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_home" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@android:drawable/ic_menu_search"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_cart" />
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_user" />
+    </com.google.android.material.tabs.TabLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

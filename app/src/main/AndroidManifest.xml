@@ -8,6 +8,11 @@
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -17,12 +22,18 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
         <activity
+            android:name="com.jojo.contact.ContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+        </activity>
+        <activity
             android:name="com.paytm.pgsdk.PaytmPGActivity"
             android:configChanges="keyboardHidden|orientation|keyboard"
             android:screenOrientation="fullSensor"
             tools:replace="android:screenOrientation" />
         <activity
-            android:name=".Checkout"
+            android:name="com.jojo.payments.Checkout"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
         <activity

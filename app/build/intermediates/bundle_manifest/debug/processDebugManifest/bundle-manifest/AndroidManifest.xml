@@ -14,6 +14,10 @@
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
@@ -34,12 +38,18 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
         <activity
+            android:name="com.jojo.contact.ContactActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <activity
             android:name="com.paytm.pgsdk.PaytmPGActivity"
             android:configChanges="keyboardHidden|orientation|keyboard"
             android:screenOrientation="fullSensor"
             android:theme="@style/AppTheme" />
         <activity
-            android:name="com.jojo.homedelivery.Checkout"
+            android:name="com.jojo.payments.Checkout"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
@@ -58,6 +68,18 @@
             </intent-filter>
         </activity>
         <activity android:name="com.jojo.homedelivery.Authentication" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.ibm.watson.developer_cloud.android.provider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" >
+            </meta-data>
+        </provider>
+
         <activity
             android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
             android:excludeFromRecents="true"
@@ -103,6 +125,11 @@
             android:name="com.paytm.pgsdk.easypay.utils.AnalyticsService"
             android:enabled="true"
             android:exported="true" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.jojo.homedelivery.com.squareup.picasso"
+            android:exported="false" />
 
         <receiver
             android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
